@@ -22,9 +22,21 @@ return item.currency_code === 'GBP';
 
 console.log(GBPItem);
 
-const woodItems = items.filter(function(item) {
-  return items.materials.includes('wood');
+// const woodItems = items.filter(function(item) {
+//   return items.materials.includes("wood");
+// });
+const item = items;
+const findWood = item.filter(function(material) {
+  return material.materials.includes("wood");
 });
+
+console.log('****NUMBER 4*');
+findWood.forEach(function(arr)
+{console.log(arr.title);
+});
+
+
+
 
 const eightOrMore = items.filter(function(item) {
   return item.materials.length >= 8;
